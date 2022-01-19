@@ -101,7 +101,7 @@ def encode(data_frame, col):
 for data_col in ['id', 'emo']:
     train_frame = encode(train_frame, data_col)
 
-train_frame.emo = np.load("emoonehot.npy", allow_pickle=True)
+train_frame.emo = np.load("exponehot.npy", allow_pickle=True)
 train_frame.id = np.load("idonehot.npy", allow_pickle=True)
 
 train_generator = train_datagen.flow_from_dataframe(
